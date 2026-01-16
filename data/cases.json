@@ -1,0 +1,964 @@
+[
+  {
+    "case_id": "8b63f8d6-38e8-401e-84e6-20c91a45bb35",
+    "case_type": "email",
+    "status": "requires_review",
+    "input_data": {
+      "email_id": "email_1768491650010",
+      "sender_email": "john.smith@techcorp.co.uk",
+      "sender_name": "John Smith",
+      "subject": "Urgent: Employment Contract Review Needed",
+      "body": "Dear BrightLaw Team,\n\nI am the HR Director at TechCorp Ltd and we urgently need assistance with reviewing our standard employment contracts. We are planning to hire 15 new developers next month and want to ensure our contracts are compliant with current UK employment law.\n\nSpecifically, we need help with:\n1. Non-compete clauses - are ours enforceable?\n2. IP assignment provisions\n3. Remote working policies\n4. Garden leave provisions\n\nCould someone please get back to me by end of this week? We have a board meeting on Monday.\n\nBest regards,\nJohn Smith\nHR Director, TechCorp Ltd",
+      "attachments": [
+        "employment_contract_v2.docx",
+        "company_policy.pdf"
+      ],
+      "received_at": "2026-01-15T15:40:50.010Z",
+      "is_reply": false
+    },
+    "processing_result": {
+      "request_id": "8b63f8d6-38e8-401e-84e6-20c91a45bb35",
+      "workflow_type": "email_processing",
+      "status": "completed",
+      "steps": [
+        {
+          "step_id": "step_430d3058",
+          "agent_id": "email_triage_agent",
+          "task_type": "email_full_triage",
+          "status": "completed",
+          "result": {
+            "classification": {
+              "intent": "document_request",
+              "urgency": "high",
+              "practice_area": "employment",
+              "sentiment": "neutral",
+              "confidence": 0.9,
+              "requires_immediate_attention": true,
+              "reasoning": "The email explicitly requests a review of employment contracts with a specific deadline (end of the week) due to an upcoming board meeting. The subject line also indicates urgency. The content focuses on employment law issues like non-compete clauses and IP assignment."
+            },
+            "extracted_data": {
+              "client_name": "TechCorp Ltd",
+              "matter_reference": null,
+              "dates_mentioned": [
+                "this week",
+                "2024-07-01"
+              ],
+              "action_requested": "Review of standard employment contracts to ensure compliance with current UK employment law.",
+              "key_entities": [
+                "John Smith",
+                "TechCorp Ltd",
+                "BrightLaw Team"
+              ],
+              "questions_asked": [
+                "Are our non-compete clauses enforceable?",
+                "Review of IP assignment provisions",
+                "Review of Remote working policies",
+                "Review of Garden leave provisions"
+              ]
+            },
+            "suggested_response": null,
+            "routing_recommendation": "lawyer_review",
+            "next_agent": null,
+            "human_review_required": true,
+            "human_review_reason": "High urgency and requires legal expertise to review employment contracts for compliance."
+          },
+          "error": null,
+          "duration_ms": 5001
+        },
+        {
+          "step_id": "step_2165a58f",
+          "agent_id": "deadline_tracker_agent",
+          "task_type": "deadline_extraction",
+          "status": "completed",
+          "result": {
+            "deadlines": [
+              {
+                "deadline_id": "dl_001",
+                "date": "2026-01-19",
+                "date_type": "client",
+                "description": "Response to HR Director at TechCorp Ltd",
+                "source_text": "Could someone please get back to me by end of this week?",
+                "confidence": 0.9,
+                "is_business_days": false,
+                "is_approximate": false,
+                "related_party": "TechCorp Ltd",
+                "consequence_of_missing": "Client dissatisfaction"
+              },
+              {
+                "deadline_id": "dl_002",
+                "date": "2026-01-26",
+                "date_type": "internal",
+                "description": "Board meeting at TechCorp Ltd",
+                "source_text": "We have a board meeting on Monday.",
+                "confidence": 0.8,
+                "is_business_days": false,
+                "is_approximate": false,
+                "related_party": "TechCorp Ltd",
+                "consequence_of_missing": "Potential delay in contract review"
+              }
+            ]
+          },
+          "error": null,
+          "duration_ms": 2457
+        },
+        {
+          "step_id": "step_b1c8c022",
+          "agent_id": "response_generator_agent",
+          "task_type": "generate_response",
+          "status": "completed",
+          "result": {
+            "response_id": "resp_001",
+            "subject": "Re: Employment Contract Review Request - TechCorp Ltd",
+            "body": "Dear Mr. Smith,\n\nThank you for reaching out to BrightLaw. We acknowledge your urgent need for assistance with reviewing your standard employment contracts in anticipation of hiring 15 new developers at TechCorp Ltd.\n\nWe understand that you require assistance with non-compete clauses, IP assignment provisions, remote working policies, and garden leave provisions. These are critical aspects of employment contracts, and we're well-equipped to help ensure your contracts are compliant with current UK employment law.\n\nTo best assist you, we need to gather some more information about your current contracts and specific requirements. [PLACEHOLDER - List of specific questions about the existing contracts, e.g., current clauses, industry specifics, etc.]. Once we have this information, we can provide a detailed proposal outlining the scope of our services and associated fees.\n\nWhile we aim to respond to all inquiries promptly, please note that providing a comprehensive review and tailored advice requires careful consideration of the details involved. We will endeavor to get back to you as soon as possible. Given your board meeting on Monday, we will prioritize this matter and aim to provide an initial response by the end of this week, although a full review may take longer.\n\nWe operate under the guidelines of the Solicitors Regulation Authority (SRA) and adhere to strict confidentiality standards.\n\nThank you for considering BrightLaw. We look forward to the opportunity to work with you.\n\n[Disclaimer: This email and any attachments are confidential and intended solely for the addressee. If you are not the intended recipient, please notify us immediately and delete this email.]\n\nBest regards,\n\nThe BrightLaw Team",
+            "tone_used": "professional",
+            "confidence": 0.95,
+            "requires_review": true,
+            "review_reasons": [
+              "New client - requires partner approval for engagement.",
+              "High urgency - ensure quick follow-up."
+            ],
+            "placeholders": [
+              "[PLACEHOLDER - List of specific questions about the existing contracts, e.g., current clauses, industry specifics, etc.]"
+            ],
+            "suggested_attachments": [
+              "BrightLaw Employment Law Services Brochure"
+            ]
+          },
+          "error": null,
+          "duration_ms": 5278
+        }
+      ],
+      "final_result": {
+        "triage": {
+          "classification": {
+            "intent": "document_request",
+            "urgency": "high",
+            "practice_area": "employment",
+            "sentiment": "neutral",
+            "confidence": 0.9,
+            "requires_immediate_attention": true,
+            "reasoning": "The email explicitly requests a review of employment contracts with a specific deadline (end of the week) due to an upcoming board meeting. The subject line also indicates urgency. The content focuses on employment law issues like non-compete clauses and IP assignment."
+          },
+          "extracted_data": {
+            "client_name": "TechCorp Ltd",
+            "matter_reference": null,
+            "dates_mentioned": [
+              "this week",
+              "2024-07-01"
+            ],
+            "action_requested": "Review of standard employment contracts to ensure compliance with current UK employment law.",
+            "key_entities": [
+              "John Smith",
+              "TechCorp Ltd",
+              "BrightLaw Team"
+            ],
+            "questions_asked": [
+              "Are our non-compete clauses enforceable?",
+              "Review of IP assignment provisions",
+              "Review of Remote working policies",
+              "Review of Garden leave provisions"
+            ]
+          },
+          "suggested_response": null,
+          "routing_recommendation": "lawyer_review",
+          "next_agent": null,
+          "human_review_required": true,
+          "human_review_reason": "High urgency and requires legal expertise to review employment contracts for compliance."
+        },
+        "deadlines": {
+          "deadlines": [
+            {
+              "deadline_id": "dl_001",
+              "date": "2026-01-19",
+              "date_type": "client",
+              "description": "Response to HR Director at TechCorp Ltd",
+              "source_text": "Could someone please get back to me by end of this week?",
+              "confidence": 0.9,
+              "is_business_days": false,
+              "is_approximate": false,
+              "related_party": "TechCorp Ltd",
+              "consequence_of_missing": "Client dissatisfaction"
+            },
+            {
+              "deadline_id": "dl_002",
+              "date": "2026-01-26",
+              "date_type": "internal",
+              "description": "Board meeting at TechCorp Ltd",
+              "source_text": "We have a board meeting on Monday.",
+              "confidence": 0.8,
+              "is_business_days": false,
+              "is_approximate": false,
+              "related_party": "TechCorp Ltd",
+              "consequence_of_missing": "Potential delay in contract review"
+            }
+          ]
+        },
+        "draft_response": {
+          "response_id": "resp_001",
+          "subject": "Re: Employment Contract Review Request - TechCorp Ltd",
+          "body": "Dear Mr. Smith,\n\nThank you for reaching out to BrightLaw. We acknowledge your urgent need for assistance with reviewing your standard employment contracts in anticipation of hiring 15 new developers at TechCorp Ltd.\n\nWe understand that you require assistance with non-compete clauses, IP assignment provisions, remote working policies, and garden leave provisions. These are critical aspects of employment contracts, and we're well-equipped to help ensure your contracts are compliant with current UK employment law.\n\nTo best assist you, we need to gather some more information about your current contracts and specific requirements. [PLACEHOLDER - List of specific questions about the existing contracts, e.g., current clauses, industry specifics, etc.]. Once we have this information, we can provide a detailed proposal outlining the scope of our services and associated fees.\n\nWhile we aim to respond to all inquiries promptly, please note that providing a comprehensive review and tailored advice requires careful consideration of the details involved. We will endeavor to get back to you as soon as possible. Given your board meeting on Monday, we will prioritize this matter and aim to provide an initial response by the end of this week, although a full review may take longer.\n\nWe operate under the guidelines of the Solicitors Regulation Authority (SRA) and adhere to strict confidentiality standards.\n\nThank you for considering BrightLaw. We look forward to the opportunity to work with you.\n\n[Disclaimer: This email and any attachments are confidential and intended solely for the addressee. If you are not the intended recipient, please notify us immediately and delete this email.]\n\nBest regards,\n\nThe BrightLaw Team",
+          "tone_used": "professional",
+          "confidence": 0.95,
+          "requires_review": true,
+          "review_reasons": [
+            "New client - requires partner approval for engagement.",
+            "High urgency - ensure quick follow-up."
+          ],
+          "placeholders": [
+            "[PLACEHOLDER - List of specific questions about the existing contracts, e.g., current clauses, industry specifics, etc.]"
+          ],
+          "suggested_attachments": [
+            "BrightLaw Employment Law Services Brochure"
+          ]
+        }
+      },
+      "total_duration_ms": 12737,
+      "agents_used": [
+        "response_generator_agent",
+        "email_triage_agent",
+        "deadline_tracker_agent"
+      ],
+      "requires_human_review": true,
+      "escalation_reasons": [
+        "Email triage: High urgency and requires legal expertise to review employment contracts for compliance."
+      ]
+    },
+    "classification": {
+      "intent": "document_request",
+      "urgency": "high",
+      "practice_area": "employment",
+      "sentiment": "neutral",
+      "confidence": 0.9,
+      "requires_immediate_attention": true,
+      "reasoning": "The email explicitly requests a review of employment contracts with a specific deadline (end of the week) due to an upcoming board meeting. The subject line also indicates urgency. The content focuses on employment law issues like non-compete clauses and IP assignment."
+    },
+    "created_at": "2026-01-15T15:40:50.015789",
+    "processed_at": "2026-01-15T15:41:02.755398",
+    "processing_duration_ms": 12738,
+    "customer_name": "John Smith",
+    "customer_email": "john.smith@techcorp.co.uk",
+    "requires_human_review": true,
+    "escalation_reason": "Email triage: High urgency and requires legal expertise to review employment contracts for compliance.",
+    "attachments": [
+      "employment_contract_v2.docx",
+      "company_policy.pdf"
+    ]
+  },
+  {
+    "case_id": "f2e3a680-7c7d-4fb7-98e1-f3268738b243",
+    "case_type": "voice_call",
+    "status": "completed",
+    "input_data": {
+      "email_id": "call_1768491669397",
+      "sender_email": "+44 7700 900456",
+      "sender_name": "Lisa Thompson",
+      "subject": "Voice Call from Lisa Thompson",
+      "body": "Hi there, my name is Lisa Thompson and I'm calling to book a consultation regarding my divorce proceedings. My husband and I have decided to separate after 15 years of marriage. We have two children aged 10 and 12, and we own a property jointly. I'd like to understand my options regarding custody arrangements and how the assets would be divided. I'm available most afternoons next week. Could someone please call me back to arrange a suitable time? My number is 07700 900456. Thank you.",
+      "attachments": [],
+      "received_at": "2026-01-15T15:41:09.397Z",
+      "is_reply": false,
+      "call_duration_seconds": 38,
+      "source_type": "voice_call"
+    },
+    "processing_result": {
+      "request_id": "f2e3a680-7c7d-4fb7-98e1-f3268738b243",
+      "workflow_type": "email_processing",
+      "status": "partial",
+      "steps": [
+        {
+          "step_id": "step_6d7ccb7f",
+          "agent_id": "email_triage_agent",
+          "task_type": "email_full_triage",
+          "status": "failed",
+          "result": null,
+          "error": "email_classification: expected JSON object, got list (len=2)",
+          "duration_ms": 2132
+        }
+      ],
+      "final_result": {},
+      "total_duration_ms": 2132,
+      "agents_used": [
+        "email_triage_agent"
+      ],
+      "requires_human_review": false,
+      "escalation_reasons": []
+    },
+    "classification": {},
+    "created_at": "2026-01-15T15:41:09.402803",
+    "processed_at": "2026-01-15T15:41:11.536810",
+    "processing_duration_ms": 2132,
+    "customer_name": "Lisa Thompson",
+    "customer_email": "+44 7700 900456",
+    "requires_human_review": false,
+    "escalation_reason": null,
+    "attachments": []
+  },
+  {
+    "case_id": "c93d8452-436e-4c94-8825-78bad5d1b681",
+    "case_type": "chat",
+    "status": "requires_review",
+    "input_data": {
+      "email_id": "chat_1768491677636",
+      "sender_email": "p.green@company.com",
+      "sender_name": "Patricia Green",
+      "subject": "Chat with Patricia Green",
+      "body": "[10:15] Patricia: Hello, I have a question about a contract I received.\n\n[10:15] Support: Good morning Patricia! How can I help you today?\n\n[10:16] Patricia: I received an employment contract from a new job offer but there's a non-compete clause that seems very broad. It says I can't work for any competitor within 100 miles for 2 years after leaving.\n\n[10:17] Support: That does sound quite restrictive. Non-compete clauses in the UK need to be reasonable to be enforceable. Would you like our employment team to review the contract?\n\n[10:18] Patricia: Yes please. How much would that cost?\n\n[10:18] Support: A standard contract review is typically \u00a3350-500 + VAT depending on complexity. We can provide a fixed quote once we see the document.\n\n[10:19] Patricia: OK, that sounds reasonable. How do I send it over?\n\n[10:19] Support: You can email it to contracts@brightlaw.co.uk or upload it through our secure portal. Shall I send you the link?\n\n[10:20] Patricia: Yes please, and can someone call me to discuss once they've reviewed it?\n\n[10:20] Support: Absolutely. I'll make a note for a callback. What's the best number to reach you?\n\n[10:21] Patricia: 07700 123456. Thanks!",
+      "attachments": [],
+      "received_at": "2026-01-15T15:41:17.636Z",
+      "is_reply": false,
+      "source_type": "chat"
+    },
+    "processing_result": {
+      "request_id": "c93d8452-436e-4c94-8825-78bad5d1b681",
+      "workflow_type": "email_processing",
+      "status": "partial",
+      "steps": [
+        {
+          "step_id": "step_cf472c79",
+          "agent_id": "email_triage_agent",
+          "task_type": "email_full_triage",
+          "status": "completed",
+          "result": {
+            "classification": {
+              "intent": "new_matter",
+              "urgency": "normal",
+              "practice_area": "employment",
+              "sentiment": "neutral",
+              "confidence": 0.9,
+              "requires_immediate_attention": false,
+              "reasoning": "Potential new client (Patricia Green) has an employment contract with a non-compete clause she wants reviewed. She has agreed to the price range and wants to send the contract over and discuss it. This is a new business opportunity for the employment team."
+            },
+            "extracted_data": {
+              "client_name": "Patricia Green",
+              "matter_reference": null,
+              "dates_mentioned": [],
+              "action_requested": "Contract review and callback to discuss the reviewed contract.",
+              "key_entities": [
+                "Patricia Green",
+                "BrightLaw",
+                "non-compete clause"
+              ],
+              "questions_asked": [
+                "How much would that cost?",
+                "How do I send it over?"
+              ]
+            },
+            "suggested_response": null,
+            "routing_recommendation": "lawyer_review",
+            "next_agent": null,
+            "human_review_required": true,
+            "human_review_reason": "Potential new client seeking legal advice on an employment contract. Requires lawyer review to assess the non-compete clause and advise on next steps."
+          },
+          "error": null,
+          "duration_ms": 4236
+        },
+        {
+          "step_id": "step_9ac5be72",
+          "agent_id": "client_intake_agent",
+          "task_type": "full_intake",
+          "status": "failed",
+          "result": null,
+          "error": "agents.client_intake_agent.FeeEstimate() argument after ** must be a mapping, not list",
+          "duration_ms": 7897
+        },
+        {
+          "step_id": "step_56dcf16d",
+          "agent_id": "deadline_tracker_agent",
+          "task_type": "deadline_extraction",
+          "status": "completed",
+          "result": {
+            "deadlines": []
+          },
+          "error": null,
+          "duration_ms": 804
+        },
+        {
+          "step_id": "step_c93ac813",
+          "agent_id": "response_generator_agent",
+          "task_type": "generate_response",
+          "status": "completed",
+          "result": {
+            "response_id": "resp_001",
+            "subject": "Re: Contract Review Request",
+            "body": "Dear Patricia,\n\nThank you for contacting BrightLaw. We understand you would like our employment team to review your employment contract, specifically the non-compete clause.\n\nAs discussed, our standard contract review typically costs between \u00a3350-500 + VAT, depending on the complexity of the document. We can provide a fixed quote once we have had a chance to review the contract.\n\nPlease send the contract to contracts@brightlaw.co.uk or upload it through our secure portal: [PLACEHOLDER - Secure Portal Link].\n\nI have made a note that you would like a call to discuss the contract once it has been reviewed. We will call you on 07700 123456.\n\nWe aim to complete the review within [PLACEHOLDER - Timeframe, e.g., 3-5 business days] of receiving the document. We will be in touch to schedule the call once the review is complete.\n\nWe look forward to assisting you.\n\nThis email and any attachments are confidential and intended solely for the addressee. If you are not the intended recipient, please notify us immediately and delete this email.",
+            "tone_used": "professional",
+            "confidence": 0.95,
+            "requires_review": false,
+            "review_reasons": [],
+            "placeholders": [
+              "[PLACEHOLDER - Secure Portal Link]",
+              "[PLACEHOLDER - Timeframe, e.g., 3-5 business days]"
+            ],
+            "suggested_attachments": []
+          },
+          "error": null,
+          "duration_ms": 3891
+        }
+      ],
+      "final_result": {
+        "triage": {
+          "classification": {
+            "intent": "new_matter",
+            "urgency": "normal",
+            "practice_area": "employment",
+            "sentiment": "neutral",
+            "confidence": 0.9,
+            "requires_immediate_attention": false,
+            "reasoning": "Potential new client (Patricia Green) has an employment contract with a non-compete clause she wants reviewed. She has agreed to the price range and wants to send the contract over and discuss it. This is a new business opportunity for the employment team."
+          },
+          "extracted_data": {
+            "client_name": "Patricia Green",
+            "matter_reference": null,
+            "dates_mentioned": [],
+            "action_requested": "Contract review and callback to discuss the reviewed contract.",
+            "key_entities": [
+              "Patricia Green",
+              "BrightLaw",
+              "non-compete clause"
+            ],
+            "questions_asked": [
+              "How much would that cost?",
+              "How do I send it over?"
+            ]
+          },
+          "suggested_response": null,
+          "routing_recommendation": "lawyer_review",
+          "next_agent": null,
+          "human_review_required": true,
+          "human_review_reason": "Potential new client seeking legal advice on an employment contract. Requires lawyer review to assess the non-compete clause and advise on next steps."
+        },
+        "deadlines": {
+          "deadlines": []
+        },
+        "draft_response": {
+          "response_id": "resp_001",
+          "subject": "Re: Contract Review Request",
+          "body": "Dear Patricia,\n\nThank you for contacting BrightLaw. We understand you would like our employment team to review your employment contract, specifically the non-compete clause.\n\nAs discussed, our standard contract review typically costs between \u00a3350-500 + VAT, depending on the complexity of the document. We can provide a fixed quote once we have had a chance to review the contract.\n\nPlease send the contract to contracts@brightlaw.co.uk or upload it through our secure portal: [PLACEHOLDER - Secure Portal Link].\n\nI have made a note that you would like a call to discuss the contract once it has been reviewed. We will call you on 07700 123456.\n\nWe aim to complete the review within [PLACEHOLDER - Timeframe, e.g., 3-5 business days] of receiving the document. We will be in touch to schedule the call once the review is complete.\n\nWe look forward to assisting you.\n\nThis email and any attachments are confidential and intended solely for the addressee. If you are not the intended recipient, please notify us immediately and delete this email.",
+          "tone_used": "professional",
+          "confidence": 0.95,
+          "requires_review": false,
+          "review_reasons": [],
+          "placeholders": [
+            "[PLACEHOLDER - Secure Portal Link]",
+            "[PLACEHOLDER - Timeframe, e.g., 3-5 business days]"
+          ],
+          "suggested_attachments": []
+        }
+      },
+      "total_duration_ms": 16833,
+      "agents_used": [
+        "client_intake_agent",
+        "response_generator_agent",
+        "email_triage_agent",
+        "deadline_tracker_agent"
+      ],
+      "requires_human_review": true,
+      "escalation_reasons": [
+        "Email triage: Potential new client seeking legal advice on an employment contract. Requires lawyer review to assess the non-compete clause and advise on next steps."
+      ]
+    },
+    "classification": {
+      "intent": "new_matter",
+      "urgency": "normal",
+      "practice_area": "employment",
+      "sentiment": "neutral",
+      "confidence": 0.9,
+      "requires_immediate_attention": false,
+      "reasoning": "Potential new client (Patricia Green) has an employment contract with a non-compete clause she wants reviewed. She has agreed to the price range and wants to send the contract over and discuss it. This is a new business opportunity for the employment team."
+    },
+    "created_at": "2026-01-15T15:41:17.640582",
+    "processed_at": "2026-01-15T15:41:34.475254",
+    "processing_duration_ms": 16833,
+    "customer_name": "Patricia Green",
+    "customer_email": "p.green@company.com",
+    "requires_human_review": true,
+    "escalation_reason": "Email triage: Potential new client seeking legal advice on an employment contract. Requires lawyer review to assess the non-compete clause and advise on next steps.",
+    "attachments": []
+  },
+  {
+    "case_id": "cbf51413-5747-4697-86de-aeb205f8b99c",
+    "case_type": "document",
+    "status": "completed",
+    "input_data": {
+      "document_id": "doc_1768491709507",
+      "filename": "commercial_lease_agreement.pdf",
+      "content": "LEASE OF COMMERCIAL PREMISES\n\nDate: 1 January 2024\n\nPARTIES:\n(1) PROPERTY HOLDINGS PLC (Company No. 87654321) ('the Landlord')\n(2) RETAIL VENTURES LIMITED (Company No. 11223344) ('the Tenant')\n\nPREMISES: Unit 5, Riverside Business Park, London SE1 9PP\n\nTERM: 10 years from 1 February 2024 to 31 January 2034\n\nRENT: \u00a3150,000 per annum (exclusive of VAT)\n\nRENT REVIEW: On the 5th anniversary (1 February 2029)\n\nBREAK CLAUSE: The Tenant may terminate on the 5th anniversary by giving 6 months' prior written notice (notice to be served by 1 August 2028)\n\nKEY DATES:\n- Completion: 15 January 2024\n- Term commencement: 1 February 2024\n- First rent payment: 1 February 2024\n- Break notice deadline: 1 August 2028\n- Break date: 1 February 2029\n- Rent review: 1 February 2029\n- Term expiry: 31 January 2034\n\nSERVICE CHARGE: Estimated at \u00a325,000 per annum\nDEPOSIT: \u00a375,000 (3 months' rent)\n\nGOVERNING LAW: England and Wales",
+      "file_type": "pdf",
+      "page_count": 45,
+      "source": "customer_upload"
+    },
+    "processing_result": {
+      "request_id": "cbf51413-5747-4697-86de-aeb205f8b99c",
+      "workflow_type": "document_processing",
+      "status": "completed",
+      "steps": [
+        {
+          "step_id": "step_71d7f81c",
+          "agent_id": "document_classification_agent",
+          "task_type": "document_full_classification",
+          "status": "completed",
+          "result": {
+            "classification": {
+              "document_type": "CONTRACTS",
+              "document_subtype": "lease_agreement",
+              "practice_area": "property",
+              "confidence": 0.95,
+              "language": "en-GB",
+              "is_template": false,
+              "is_executed": true,
+              "is_draft": false,
+              "reasoning": "The document is clearly a commercial lease agreement based on the title, parties (Landlord and Tenant), premises description, term, rent, and other clauses like rent review and break clause. Key dates are also specified. The presence of defined terms and clauses indicates it's not a draft."
+            },
+            "metadata": {
+              "title": "LEASE OF COMMERCIAL PREMISES",
+              "date": "2024-01-01",
+              "parties": [
+                "PROPERTY HOLDINGS PLC",
+                "RETAIL VENTURES LIMITED"
+              ],
+              "references": [
+                "Company No. 87654321",
+                "Company No. 11223344"
+              ],
+              "effective_date": "2024-02-01",
+              "expiry_date": "2034-01-31",
+              "jurisdiction": "England and Wales",
+              "governing_law": "England and Wales",
+              "key_terms": [
+                "Premises: Unit 5, Riverside Business Park, London SE1 9PP",
+                "Term: 10 years",
+                "Rent: \u00a3150,000 per annum",
+                "Rent Review: 1 February 2029",
+                "Break Clause: Tenant may terminate on the 5th anniversary by giving 6 months' prior written notice (notice to be served by 1 August 2028)",
+                "Service Charge: Estimated at \u00a325,000 per annum",
+                "Deposit: \u00a375,000"
+              ]
+            },
+            "flags": {
+              "contains_pii": false,
+              "contains_financial_data": true,
+              "privileged": false,
+              "confidential_marking": false,
+              "requires_witness": true,
+              "time_sensitive": true,
+              "flagged_clauses": []
+            },
+            "suggested_storage_path": "/property/CONTRACTS/2024/commercial_lease_agreement.pdf",
+            "related_document_types": [],
+            "next_actions": [
+              "extract_deadlines",
+              "create_calendar_reminders"
+            ]
+          },
+          "error": null,
+          "duration_ms": 4929
+        },
+        {
+          "step_id": "step_f3f10a25",
+          "agent_id": "deadline_tracker_agent",
+          "task_type": "full_deadline_analysis",
+          "status": "completed",
+          "result": {
+            "source_id": "doc_1768491709507",
+            "deadlines": [
+              {
+                "deadline_id": "dl_001",
+                "date": "2030-01-15",
+                "date_type": "contractual",
+                "description": "Contract claim limitation period (6 years from reference date)",
+                "source_text": "LEASE OF COMMERCIAL PREMISES",
+                "confidence": 0.8,
+                "is_business_days": false,
+                "is_approximate": false,
+                "related_party": null,
+                "consequence_of_missing": "Loss of right to sue for breach of contract"
+              },
+              {
+                "deadline_id": "dl_002",
+                "date": "2028-08-01",
+                "date_type": "contractual",
+                "description": "Break notice deadline",
+                "source_text": "notice to be served by 1 August 2028",
+                "confidence": 1.0,
+                "is_business_days": false,
+                "is_approximate": false,
+                "related_party": "Tenant",
+                "consequence_of_missing": "Tenant cannot terminate the lease on the 5th anniversary"
+              },
+              {
+                "deadline_id": "dl_003",
+                "date": "2034-01-31",
+                "date_type": "contractual",
+                "description": "Term expiry",
+                "source_text": "Term expiry: 31 January 2034",
+                "confidence": 1.0,
+                "is_business_days": false,
+                "is_approximate": false,
+                "related_party": null,
+                "consequence_of_missing": "End of lease term"
+              }
+            ],
+            "reminder_schedules": [
+              {
+                "deadline_id": "dl_001",
+                "reminders": [
+                  {
+                    "date": "2029-12-16",
+                    "days_before": 30,
+                    "message": "Reminder: Contract claim limitation period (6 years from reference date) due in 30 days"
+                  },
+                  {
+                    "date": "2030-01-01",
+                    "days_before": 14,
+                    "message": "Reminder: Contract claim limitation period (6 years from reference date) due in 14 days"
+                  },
+                  {
+                    "date": "2030-01-08",
+                    "days_before": 7,
+                    "message": "Reminder: Contract claim limitation period (6 years from reference date) due in 7 days"
+                  },
+                  {
+                    "date": "2030-01-14",
+                    "days_before": 1,
+                    "message": "Reminder: Contract claim limitation period (6 years from reference date) due in 1 days"
+                  }
+                ]
+              },
+              {
+                "deadline_id": "dl_002",
+                "reminders": [
+                  {
+                    "date": "2028-07-02",
+                    "days_before": 30,
+                    "message": "Reminder: Break notice deadline due in 30 days"
+                  },
+                  {
+                    "date": "2028-07-18",
+                    "days_before": 14,
+                    "message": "Reminder: Break notice deadline due in 14 days"
+                  },
+                  {
+                    "date": "2028-07-25",
+                    "days_before": 7,
+                    "message": "Reminder: Break notice deadline due in 7 days"
+                  },
+                  {
+                    "date": "2028-07-31",
+                    "days_before": 1,
+                    "message": "Reminder: Break notice deadline due in 1 days"
+                  }
+                ]
+              },
+              {
+                "deadline_id": "dl_003",
+                "reminders": [
+                  {
+                    "date": "2034-01-01",
+                    "days_before": 30,
+                    "message": "Reminder: Term expiry due in 30 days"
+                  },
+                  {
+                    "date": "2034-01-17",
+                    "days_before": 14,
+                    "message": "Reminder: Term expiry due in 14 days"
+                  },
+                  {
+                    "date": "2034-01-24",
+                    "days_before": 7,
+                    "message": "Reminder: Term expiry due in 7 days"
+                  },
+                  {
+                    "date": "2034-01-30",
+                    "days_before": 1,
+                    "message": "Reminder: Term expiry due in 1 days"
+                  }
+                ]
+              }
+            ],
+            "analysis": {
+              "total_deadlines": 3,
+              "critical_count": 0,
+              "overdue_count": 0,
+              "upcoming_7_days": 0,
+              "upcoming_30_days": 0,
+              "by_type": {
+                "contractual": 3
+              },
+              "by_priority": {
+                "critical": 0,
+                "high": 3,
+                "medium": 0,
+                "low": 0
+              }
+            },
+            "warnings": [],
+            "calendar_entries": [
+              {
+                "title": "DEADLINE: Contract claim limitation period (6 years from reference date)",
+                "date": "2030-01-15",
+                "type": "contractual",
+                "all_day": true,
+                "description": "Source: LEASE OF COMMERCIAL PREMISES\nConsequence: Loss of right to sue for breach of contract"
+              },
+              {
+                "title": "DEADLINE: Break notice deadline",
+                "date": "2028-08-01",
+                "type": "contractual",
+                "all_day": true,
+                "description": "Source: notice to be served by 1 August 2028\nConsequence: Tenant cannot terminate the lease on the 5th anniversary"
+              },
+              {
+                "title": "DEADLINE: Term expiry",
+                "date": "2034-01-31",
+                "type": "contractual",
+                "all_day": true,
+                "description": "Source: Term expiry: 31 January 2034\nConsequence: End of lease term"
+              }
+            ]
+          },
+          "error": null,
+          "duration_ms": 3014
+        }
+      ],
+      "final_result": {
+        "classification": {
+          "classification": {
+            "document_type": "CONTRACTS",
+            "document_subtype": "lease_agreement",
+            "practice_area": "property",
+            "confidence": 0.95,
+            "language": "en-GB",
+            "is_template": false,
+            "is_executed": true,
+            "is_draft": false,
+            "reasoning": "The document is clearly a commercial lease agreement based on the title, parties (Landlord and Tenant), premises description, term, rent, and other clauses like rent review and break clause. Key dates are also specified. The presence of defined terms and clauses indicates it's not a draft."
+          },
+          "metadata": {
+            "title": "LEASE OF COMMERCIAL PREMISES",
+            "date": "2024-01-01",
+            "parties": [
+              "PROPERTY HOLDINGS PLC",
+              "RETAIL VENTURES LIMITED"
+            ],
+            "references": [
+              "Company No. 87654321",
+              "Company No. 11223344"
+            ],
+            "effective_date": "2024-02-01",
+            "expiry_date": "2034-01-31",
+            "jurisdiction": "England and Wales",
+            "governing_law": "England and Wales",
+            "key_terms": [
+              "Premises: Unit 5, Riverside Business Park, London SE1 9PP",
+              "Term: 10 years",
+              "Rent: \u00a3150,000 per annum",
+              "Rent Review: 1 February 2029",
+              "Break Clause: Tenant may terminate on the 5th anniversary by giving 6 months' prior written notice (notice to be served by 1 August 2028)",
+              "Service Charge: Estimated at \u00a325,000 per annum",
+              "Deposit: \u00a375,000"
+            ]
+          },
+          "flags": {
+            "contains_pii": false,
+            "contains_financial_data": true,
+            "privileged": false,
+            "confidential_marking": false,
+            "requires_witness": true,
+            "time_sensitive": true,
+            "flagged_clauses": []
+          },
+          "suggested_storage_path": "/property/CONTRACTS/2024/commercial_lease_agreement.pdf",
+          "related_document_types": [],
+          "next_actions": [
+            "extract_deadlines",
+            "create_calendar_reminders"
+          ]
+        },
+        "deadlines": {
+          "source_id": "doc_1768491709507",
+          "deadlines": [
+            {
+              "deadline_id": "dl_001",
+              "date": "2030-01-15",
+              "date_type": "contractual",
+              "description": "Contract claim limitation period (6 years from reference date)",
+              "source_text": "LEASE OF COMMERCIAL PREMISES",
+              "confidence": 0.8,
+              "is_business_days": false,
+              "is_approximate": false,
+              "related_party": null,
+              "consequence_of_missing": "Loss of right to sue for breach of contract"
+            },
+            {
+              "deadline_id": "dl_002",
+              "date": "2028-08-01",
+              "date_type": "contractual",
+              "description": "Break notice deadline",
+              "source_text": "notice to be served by 1 August 2028",
+              "confidence": 1.0,
+              "is_business_days": false,
+              "is_approximate": false,
+              "related_party": "Tenant",
+              "consequence_of_missing": "Tenant cannot terminate the lease on the 5th anniversary"
+            },
+            {
+              "deadline_id": "dl_003",
+              "date": "2034-01-31",
+              "date_type": "contractual",
+              "description": "Term expiry",
+              "source_text": "Term expiry: 31 January 2034",
+              "confidence": 1.0,
+              "is_business_days": false,
+              "is_approximate": false,
+              "related_party": null,
+              "consequence_of_missing": "End of lease term"
+            }
+          ],
+          "reminder_schedules": [
+            {
+              "deadline_id": "dl_001",
+              "reminders": [
+                {
+                  "date": "2029-12-16",
+                  "days_before": 30,
+                  "message": "Reminder: Contract claim limitation period (6 years from reference date) due in 30 days"
+                },
+                {
+                  "date": "2030-01-01",
+                  "days_before": 14,
+                  "message": "Reminder: Contract claim limitation period (6 years from reference date) due in 14 days"
+                },
+                {
+                  "date": "2030-01-08",
+                  "days_before": 7,
+                  "message": "Reminder: Contract claim limitation period (6 years from reference date) due in 7 days"
+                },
+                {
+                  "date": "2030-01-14",
+                  "days_before": 1,
+                  "message": "Reminder: Contract claim limitation period (6 years from reference date) due in 1 days"
+                }
+              ]
+            },
+            {
+              "deadline_id": "dl_002",
+              "reminders": [
+                {
+                  "date": "2028-07-02",
+                  "days_before": 30,
+                  "message": "Reminder: Break notice deadline due in 30 days"
+                },
+                {
+                  "date": "2028-07-18",
+                  "days_before": 14,
+                  "message": "Reminder: Break notice deadline due in 14 days"
+                },
+                {
+                  "date": "2028-07-25",
+                  "days_before": 7,
+                  "message": "Reminder: Break notice deadline due in 7 days"
+                },
+                {
+                  "date": "2028-07-31",
+                  "days_before": 1,
+                  "message": "Reminder: Break notice deadline due in 1 days"
+                }
+              ]
+            },
+            {
+              "deadline_id": "dl_003",
+              "reminders": [
+                {
+                  "date": "2034-01-01",
+                  "days_before": 30,
+                  "message": "Reminder: Term expiry due in 30 days"
+                },
+                {
+                  "date": "2034-01-17",
+                  "days_before": 14,
+                  "message": "Reminder: Term expiry due in 14 days"
+                },
+                {
+                  "date": "2034-01-24",
+                  "days_before": 7,
+                  "message": "Reminder: Term expiry due in 7 days"
+                },
+                {
+                  "date": "2034-01-30",
+                  "days_before": 1,
+                  "message": "Reminder: Term expiry due in 1 days"
+                }
+              ]
+            }
+          ],
+          "analysis": {
+            "total_deadlines": 3,
+            "critical_count": 0,
+            "overdue_count": 0,
+            "upcoming_7_days": 0,
+            "upcoming_30_days": 0,
+            "by_type": {
+              "contractual": 3
+            },
+            "by_priority": {
+              "critical": 0,
+              "high": 3,
+              "medium": 0,
+              "low": 0
+            }
+          },
+          "warnings": [],
+          "calendar_entries": [
+            {
+              "title": "DEADLINE: Contract claim limitation period (6 years from reference date)",
+              "date": "2030-01-15",
+              "type": "contractual",
+              "all_day": true,
+              "description": "Source: LEASE OF COMMERCIAL PREMISES\nConsequence: Loss of right to sue for breach of contract"
+            },
+            {
+              "title": "DEADLINE: Break notice deadline",
+              "date": "2028-08-01",
+              "type": "contractual",
+              "all_day": true,
+              "description": "Source: notice to be served by 1 August 2028\nConsequence: Tenant cannot terminate the lease on the 5th anniversary"
+            },
+            {
+              "title": "DEADLINE: Term expiry",
+              "date": "2034-01-31",
+              "type": "contractual",
+              "all_day": true,
+              "description": "Source: Term expiry: 31 January 2034\nConsequence: End of lease term"
+            }
+          ]
+        }
+      },
+      "total_duration_ms": 7944,
+      "agents_used": [
+        "document_classification_agent",
+        "deadline_tracker_agent"
+      ],
+      "requires_human_review": false,
+      "escalation_reasons": []
+    },
+    "classification": {
+      "document_type": "CONTRACTS",
+      "document_subtype": "lease_agreement",
+      "practice_area": "property",
+      "confidence": 0.95,
+      "language": "en-GB",
+      "is_template": false,
+      "is_executed": true,
+      "is_draft": false,
+      "reasoning": "The document is clearly a commercial lease agreement based on the title, parties (Landlord and Tenant), premises description, term, rent, and other clauses like rent review and break clause. Key dates are also specified. The presence of defined terms and clauses indicates it's not a draft."
+    },
+    "created_at": "2026-01-15T15:41:49.511001",
+    "processed_at": "2026-01-15T15:41:57.457293",
+    "processing_duration_ms": 7944,
+    "customer_name": null,
+    "customer_email": null,
+    "requires_human_review": false,
+    "escalation_reason": null,
+    "attachments": []
+  }
+]

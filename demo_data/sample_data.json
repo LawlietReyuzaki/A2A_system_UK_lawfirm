@@ -1,0 +1,71 @@
+{
+  "sample_emails": [
+    {
+      "email_id": "email_001",
+      "sender_email": "john.smith@techcorp.co.uk",
+      "sender_name": "John Smith",
+      "subject": "Urgent: Employment Contract Review Needed",
+      "body": "Dear BrightLaw Team,\n\nI am the HR Director at TechCorp Ltd and we urgently need assistance with reviewing our standard employment contracts. We are planning to hire 15 new developers next month and want to ensure our contracts are compliant with current UK employment law.\n\nSpecifically, we need help with:\n1. Non-compete clauses - are ours enforceable?\n2. IP assignment provisions\n3. Remote working policies\n4. Garden leave provisions\n\nWe were referred to you by ABC Properties Ltd who spoke highly of your employment team.\n\nCould someone please get back to me by end of this week? We have a board meeting on Monday where I need to present the updated contracts.\n\nBest regards,\nJohn Smith\nHR Director, TechCorp Ltd\nCompany No: 12345678",
+      "received_at": "2024-01-15T09:30:00Z",
+      "attachments": ["current_employment_contract.docx"],
+      "is_reply": false
+    },
+    {
+      "email_id": "email_002", 
+      "sender_email": "sarah.jones@gmail.com",
+      "sender_name": "Sarah Jones",
+      "subject": "Case Update Request - Matter Ref M2024-002",
+      "body": "Hi,\n\nI'm writing to request an update on my unfair dismissal claim against my former employer, Davidson & Co.\n\nMy matter reference is M2024-002. I haven't heard anything since our last meeting two weeks ago and the tribunal hearing is scheduled for March 15th.\n\nCould you please let me know:\n- Have you received the employer's response yet?\n- What documents do I need to prepare?\n- When can we meet to prepare my witness statement?\n\nI'm getting quite anxious about the upcoming hearing.\n\nThanks,\nSarah",
+      "received_at": "2024-01-15T14:22:00Z",
+      "attachments": [],
+      "is_reply": true,
+      "thread_id": "thread_002"
+    },
+    {
+      "email_id": "email_003",
+      "sender_email": "complaints@brightlaw.co.uk",
+      "sender_name": "Michael Brown",
+      "subject": "COMPLAINT - Slow Response Times",
+      "body": "To Whom It May Concern,\n\nI am extremely disappointed with the service I have received from your firm regarding my property purchase at 42 Oak Lane, Bristol.\n\nI have been waiting over 3 weeks for a response to my queries about the local authority search results. Every time I call, I'm told someone will get back to me 'soon' but nobody ever does.\n\nMy mortgage offer expires on February 1st and if we don't complete by then, I will lose my dream home and potentially £50,000 in price difference.\n\nI expect an immediate response and escalation to a senior partner. If I do not hear back within 24 hours, I will be filing a complaint with the Legal Ombudsman.\n\nMichael Brown\nMatter: Property Purchase - 42 Oak Lane",
+      "received_at": "2024-01-15T16:45:00Z",
+      "attachments": [],
+      "is_reply": false
+    }
+  ],
+  "sample_documents": [
+    {
+      "document_id": "doc_001",
+      "filename": "employment_contract_template.docx",
+      "file_type": "docx",
+      "page_count": 12,
+      "content": "EMPLOYMENT CONTRACT\n\nBetween: TechCorp Limited (Company No. 12345678) ('the Employer')\nAnd: [Employee Name] ('the Employee')\n\nDate: [Date]\n\n1. COMMENCEMENT AND JOB TITLE\n1.1 Your employment will commence on [Start Date].\n1.2 Your job title will be [Job Title].\n1.3 You will report to [Manager Name].\n\n2. PROBATIONARY PERIOD\n2.1 Your employment is subject to a probationary period of 6 months.\n2.2 During this period, either party may terminate with 1 week's notice.\n\n3. REMUNERATION\n3.1 Your annual salary will be £[Amount] payable monthly in arrears.\n3.2 Salary reviews will take place annually in April.\n\n4. WORKING HOURS\n4.1 Normal working hours are 37.5 hours per week, Monday to Friday.\n4.2 You may be required to work additional hours as reasonably necessary.\n\n5. HOLIDAY ENTITLEMENT\n5.1 You are entitled to 25 days paid holiday plus bank holidays.\n5.2 The holiday year runs from 1 January to 31 December.\n\n6. NOTICE PERIODS\n6.1 After the probationary period, either party must give 3 months' notice.\n\n7. CONFIDENTIALITY\n7.1 You must not disclose any confidential information during or after employment.\n7.2 Confidential information includes client lists, pricing, and business strategies.\n\n8. INTELLECTUAL PROPERTY\n8.1 All IP created during employment belongs to the Employer.\n8.2 You assign all rights in any inventions, designs, or works created.\n\n9. RESTRICTIVE COVENANTS\n9.1 Non-compete: For 12 months after termination, you shall not work for a competitor within 50 miles.\n9.2 Non-solicitation: For 12 months, you shall not solicit clients or employees.\n9.3 Garden leave: The Employer may place you on garden leave during your notice period.\n\n10. GOVERNING LAW\nThis contract is governed by the laws of England and Wales.\n\nSIGNED:\n_______________\nFor and on behalf of TechCorp Limited\n\n_______________\nEmployee",
+      "source": "upload",
+      "matter_id": "M2024-015"
+    },
+    {
+      "document_id": "doc_002",
+      "filename": "commercial_lease_agreement.pdf",
+      "file_type": "pdf",
+      "page_count": 45,
+      "content": "LEASE OF COMMERCIAL PREMISES\n\nDate: 1 January 2024\n\nPARTIES:\n(1) PROPERTY HOLDINGS PLC (Company No. 87654321) ('the Landlord')\n(2) RETAIL VENTURES LIMITED (Company No. 11223344) ('the Tenant')\n\nPREMISES: Unit 5, Riverside Business Park, London SE1 9PP\n\nTERM: 10 years from 1 February 2024 to 31 January 2034\n\nRENT: £150,000 per annum (exclusive of VAT)\n\nRENT REVIEW: On the 5th anniversary (1 February 2029)\n\nBREAK CLAUSE: The Tenant may terminate on the 5th anniversary by giving 6 months' prior written notice (notice to be served by 1 August 2028)\n\nREPAIR: Full repairing and insuring lease\n\nUSE: Retail (Class E)\n\nALIENATION: Assignment permitted with Landlord's consent (not to be unreasonably withheld)\n\nKEY DATES:\n- Completion: 15 January 2024\n- Term commencement: 1 February 2024\n- First rent payment: 1 February 2024\n- Break notice deadline: 1 August 2028\n- Break date: 1 February 2029\n- Rent review: 1 February 2029\n- Term expiry: 31 January 2034\n\nSERVICE CHARGE: Estimated at £25,000 per annum\n\nDEPOSIT: £75,000 (3 months' rent)\n\nGOVERNING LAW: England and Wales\n\nLand Registry Title Number: NGL123456",
+      "source": "upload",
+      "matter_id": "M2024-033"
+    }
+  ],
+  "sample_intakes": [
+    {
+      "inquiry_id": "inq_001",
+      "source": "website_form",
+      "client_name": "Emma Wilson",
+      "client_type": "individual",
+      "contact_email": "emma.wilson@email.com",
+      "contact_phone": "07700 900123",
+      "matter_description": "I was dismissed from my job at Global Finance Ltd last week after raising concerns about irregular accounting practices. I believe this is unfair dismissal and possibly whistleblower retaliation. I was employed there for 5 years as a Senior Accountant. They claim it was redundancy but nobody else was made redundant and they've already advertised my role. I need advice on whether I have a claim and what the time limits are.",
+      "practice_area": "employment",
+      "urgency": "high",
+      "opposing_parties": ["Global Finance Ltd"],
+      "referral_source": "Google search",
+      "budget_indication": "Up to £10,000"
+    }
+  ]
+}
